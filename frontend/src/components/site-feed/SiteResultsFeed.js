@@ -25,7 +25,7 @@ const SiteResultsFeed = (props) => {
 
   return (
     <div className="flex flex-nowrap ml-10">
-      <h1 className="px-20 text-center font-inter text-4xl font-bold">
+      <h1 className="absolute px-20 text-center font-inter text-4xl font-bold">
         {props.feedTitle}
       </h1>
       <div className="flex justify-center px-20 py-14 gap-5">
