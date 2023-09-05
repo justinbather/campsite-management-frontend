@@ -19,7 +19,6 @@ const ParkHome = () => {
   const [amenities, setAmenities] = useState([]);
 
   const { parkId } = useParams();
-  console.log(parkId);
 
   const fetchParkData = async () => {
     axios

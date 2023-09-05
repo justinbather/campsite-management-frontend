@@ -35,7 +35,7 @@ const SiteView = (props) => {
         });
 
       axios
-        .get(`/siteimage/${siteId}`)
+        .get(`${API_URL}/siteimage/${siteId}`)
         .then((siteImageData) => {
           setSiteImages(siteImageData.data);
         })
