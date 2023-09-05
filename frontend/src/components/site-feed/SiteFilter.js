@@ -16,7 +16,7 @@ const SiteFilter = (props) => {
 
   const fetchFilteredSites = async (parsedArrivalDate, parsedDepartureDate) => {
     axios
-      .get(`${API_URL}/bookings/2/${parsedArrivalDate}/${parsedDepartureDate}`)
+      .get(`${API_URL}/bookings/${props.parkId}/${parsedArrivalDate}/${parsedDepartureDate}`)
       .then((res) => {
         setFilteredSites(res.data);
 

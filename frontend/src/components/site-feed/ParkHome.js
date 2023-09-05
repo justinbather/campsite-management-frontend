@@ -99,6 +99,7 @@ const ParkHome = () => {
           arrival={updateArrivalDate}
           departure={updateDepartureDate}
           sites={updateRawAvailableSites}
+          parkId={parkId}
         />
         <div className="w-8 h-8 flex flex-row mt-3 items-center justify-center align-center hover:bg-neutral-200 rounded-full transition">
           <a onClick={handleDropdownToggle}>
