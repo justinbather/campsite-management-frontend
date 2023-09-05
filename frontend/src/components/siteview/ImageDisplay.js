@@ -26,7 +26,7 @@ const ImageDisplay = (props) => {
             </div>
             <div className="flex">
               <div className="sm:gap-1 grid grid-cols-2 justify-center">
-                {imageArray.map((image, index) => (
+                {imageArray && imageArray.map((image, index) => (
                   <img
                     key={index}
                     alt="image"
