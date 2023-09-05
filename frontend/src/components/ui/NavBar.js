@@ -34,7 +34,7 @@ Component Use
 
         {props.showTitle && (
           <div className="flex flex-row justify-center items-center gap-3">
-            <img className="max-h-10" src={`${MEDIA_URL}${props.titleImg}`}></img>
+            <img className="max-h-10" src={props.titleImg}></img>
             <h1 className="font-5xl text-center justify-center">
               {props.titleText}
             </h1>
