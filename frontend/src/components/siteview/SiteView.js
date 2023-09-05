@@ -23,38 +23,36 @@ const SiteView = (props) => {
 
   const fetchSiteData = () => {
     setLoading(true);
-    setTimeout(() => {
-      axios
-        .get(`${API_URL}/site/${siteId}`)
-        .then((siteData) => {
-          console.log(siteData);
-          setSite(siteData.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    axios
+      .get(`${API_URL}/site/${siteId}`)
+      .then((siteData) => {
+        console.log(siteData);
+        setSite(siteData.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
-      axios
-        .get(`${API_URL}/siteimage/${siteId}`)
-        .then((siteImageData) => {
-          setSiteImages(siteImageData.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+    axios
+      .get(`${API_URL}/siteimage/${siteId}`)
+      .then((siteImageData) => {
+        setSiteImages(siteImageData.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
 
-      axios
-        .get(`/park/${parkId}`)
-        .then((res) => {
-          setCampData(res.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, 10000);
+    axios
+      .get(`${API_URL}/park/${parkId}`)
+      .then((res) => {
+        setCampData(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
