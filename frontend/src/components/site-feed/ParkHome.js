@@ -7,6 +7,7 @@ import filterIcon from "../../assets/filter-icon.png";
 import closeIcon from "../../assets/close-icon.png";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../../constants";
 
 const ParkHome = () => {
   const [parkData, setParkData] = useState([]);
@@ -22,7 +23,7 @@ const ParkHome = () => {
 
   const fetchParkData = async () => {
     axios
-      .get(`/park/${parkId}`)
+      .get(`${API_URL}/park/${parkId}`)
       .then((res) => {
         setParkData(res.data);
       })

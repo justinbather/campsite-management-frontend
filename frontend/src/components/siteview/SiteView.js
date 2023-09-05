@@ -9,6 +9,7 @@ import PricingCard from "./PricingCard";
 import SiteViewSkeleton from "./ImageDisplaySkeleton";
 import GoogleMapDisplay from "../ui/GoogleMapDisplay";
 import SiteInfo from "./SiteInfo";
+import { API_URL } from "../../constants";
 
 const SiteView = (props) => {
   const { parkId } = useParams();
@@ -24,7 +25,7 @@ const SiteView = (props) => {
     setLoading(true);
     setTimeout(() => {
       axios
-        .get(`/site/${siteId}`)
+        .get(`${API_URL}/site/${siteId}`)
         .then((siteData) => {
           console.log(siteData);
           setSite(siteData.data);

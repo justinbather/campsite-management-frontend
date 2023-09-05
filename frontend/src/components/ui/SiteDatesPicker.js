@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import { useState, useEffect } from "react";
 import { HiArrowRight } from "react-icons/hi";
 import axios from "axios";
+import { API_URL } from "../../constants";
 
 
 const SiteDatesPicker = (props) => {
@@ -15,7 +16,7 @@ const SiteDatesPicker = (props) => {
 
   const fetchUnavailableDates = async (parsedCurrentDate) => {
     axios
-      .get(`/unavailabledates/${props.parkId}/${props.siteId}/${parsedCurrentDate}`)
+      .get(`${API_URL}/unavailabledates/${props.parkId}/${props.siteId}/${parsedCurrentDate}`)
       .then((res) => {
         setUnavailableDates(res.data.dates)
       })

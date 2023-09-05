@@ -4,6 +4,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DatesPicker from "../ui/DatesPicker";
+import { API_URL } from "../../constants";
 
 const SiteFilter = (props) => {
   const [departureDate, setDepartureDate] = useState(dayjs());
@@ -15,7 +16,7 @@ const SiteFilter = (props) => {
 
   const fetchFilteredSites = async (parsedArrivalDate, parsedDepartureDate) => {
     axios
-      .get(`/bookings/2/${parsedArrivalDate}/${parsedDepartureDate}`)
+      .get(`${API_URL}/bookings/2/${parsedArrivalDate}/${parsedDepartureDate}`)
       .then((res) => {
         setFilteredSites(res.data);
 
