@@ -11,7 +11,7 @@ const ImageDisplay = (props) => {
       ? setImageArray(props.siteImages.slice(0, 5))
       : setImageArray(props.siteImages);
   }, [props]);
-  console.log(`Image array:${imageArray}`)
+
 
   return (
     <div className="pt-4">
@@ -27,7 +27,7 @@ const ImageDisplay = (props) => {
             </div>
             <div className="flex">
               <div className="sm:gap-1 grid grid-cols-2 justify-center">
-                {imageArray.map((image, index) => (
+                {props.siteImages.map((image, index) => (
                   <img
                     key={index}
                     alt="image"
