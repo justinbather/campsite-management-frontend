@@ -4,6 +4,7 @@ import GradientButton from "./GradientButton";
 import ProfileIcon from "./ProfileIcon";
 import Logo from "../../assets/weCamp-favicon.png";
 import { useNavigate } from "react-router-dom";
+import { MEDIA_URL } from "../../constants";
 
 const NavBar = (props) => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ Component Use
 
         {props.showTitle && (
           <div className="flex flex-row justify-center items-center gap-3">
-            <img className="max-h-10" src={`https://campsite-management-api-27012b8fbddf.herokuapp.com/app${props.titleImg}`}></img>
+            <img className="max-h-10" src={`${MEDIA_URL}${props.titleImg}`}></img>
             <h1 className="font-5xl text-center justify-center">
               {props.titleText}
             </h1>
