@@ -30,7 +30,7 @@ const SiteResultsFeed = (props) => {
       </h1>
       <div className="flex justify-center px-20 py-14 gap-5">
         {props.sites.map((site) => (
-          <div className="flex w-[25rem] h-[20rem] bg-base-100 drop-shadow-xl justify-center overflow-hidden rounded-xl hover:ring-4 ring-neutral-300">
+          <div className="flex w-[20rem] h-[15rem] bg-base-100 drop-shadow-xl justify-center overflow-hidden rounded-xl hover:ring-4 ring-neutral-300">
             <img
               className="w-full h-full"
               alt="image"
