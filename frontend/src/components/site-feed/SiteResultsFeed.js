@@ -25,10 +25,10 @@ const SiteResultsFeed = (props) => {
 
   return (
     <div className="flex flex-nowrap ml-10">
-      <h1 className="absolute px-20 text-center font-inter text-4xl font-bold">
+      <h1 className="px-20 text-center font-inter text-4xl font-bold">
         {props.feedTitle}
       </h1>
-      <div className="flex justify-center px-20 py-5 gap-5">
+      <div className="flex justify-center px-20 py-14 gap-5">
         {props.sites.map((site) => (
           <div className="flex w-[20rem] h-[15rem] bg-base-100 drop-shadow-xl justify-center overflow-hidden rounded-xl hover:ring-4 ring-neutral-300">
             <img
