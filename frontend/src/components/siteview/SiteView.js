@@ -100,7 +100,7 @@ const SiteView = (props) => {
             <div className="flex w-full h-full my-10">
               <SiteDescription siteDescription={campData.description} />
             </div>
-            <div className="flex w-full h-96 mb-10">
+            <div className="flex w-full h-96 mb-5">
               <GoogleMapDisplay
                 parkLatitude={campData.latitude}
                 parkLongitude={campData.longitude}
