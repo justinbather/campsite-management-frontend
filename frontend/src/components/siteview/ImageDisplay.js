@@ -11,6 +11,7 @@ const ImageDisplay = (props) => {
       ? setImageArray(props.siteImages.slice(0, 5))
       : setImageArray(props.siteImages);
   }, [props]);
+  console.log(`Image array:${imageArray}`)
 
   return (
     <div className="pt-4">
