@@ -60,6 +60,7 @@ const SiteView = (props) => {
   useEffect(() => {
     fetchSiteData();
     console.log(campData);
+    console.log(siteImages);
   }, []);
 
   return (
@@ -88,7 +89,6 @@ const SiteView = (props) => {
               <SiteInfo
                 siteAmenities={site.amenities}
                 siteName={site.id}
-
                 campgroundLogo={campData.logo}
               />
               <PricingCard
@@ -100,11 +100,7 @@ const SiteView = (props) => {
               />
             </div>
             <div className="flex w-full h-full my-10">
-            <SiteDescription
-
-                siteDescription={campData.description}
-     
-              />
+              <SiteDescription siteDescription={campData.description} />
             </div>
             <div className="flex w-full py-10 h-96">
               <GoogleMapDisplay
