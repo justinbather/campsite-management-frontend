@@ -77,7 +77,7 @@ const ParkHome = () => {
   const sortSitesByCategory = (category) => {
     const sites = updateFilteredSites()
     const sortedSites = sites.filter((site) => {
-      console.log(site.site_type)
+      console.log(site)
       return site.site_type === category
     })
     return sortedSites
