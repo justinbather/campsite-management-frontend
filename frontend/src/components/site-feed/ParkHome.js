@@ -76,6 +76,7 @@ const ParkHome = () => {
 
   const sortSitesByCategory = (filteredSites, category) => {
     const sortedSites = filteredSites.filter((site) => {
+      console.log(site.site_type)
       return site.site_type === category
     })
     return sortedSites
@@ -137,7 +138,7 @@ const ParkHome = () => {
       <div className="flex pt-5 overflow-x-scroll hide-scroll-bar">
         <SiteResultsFeed
           feedTitle="Best Tent Sites"
-          sites={sortSitesByCategory(updateFilteredSites(), "Tent")}
+          sites={sortSitesByCategory(updateFilteredSites, "Tent")}
           initialArrival={arrivalDate}
           initialDeparture={departureDate}
         />
