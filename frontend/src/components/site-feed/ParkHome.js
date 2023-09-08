@@ -74,6 +74,13 @@ const ParkHome = () => {
     return filteredSites;
   }; // Filtering function works, need to work on checking off amenities to remove the delay between selecting and changing state
 
+  const sortSitesByCategory = (filteredSites, category) => {
+    const sortedSites = filteredSites.filter((site) => {
+      return site.site_type === category
+    })
+    return sortedSites
+  }
+
   const handleDropdownToggle = () => {
     setDropdownToggle(!dropdownToggle);
   };
@@ -130,7 +137,7 @@ const ParkHome = () => {
       <div className="flex pt-5 overflow-x-scroll hide-scroll-bar">
         <SiteResultsFeed
           feedTitle="Best Tent Sites"
-          sites={updateFilteredSites()}
+          sites={sortSitesByCategory(updateFilteredSites(), "Tent")}
           initialArrival={arrivalDate}
           initialDeparture={departureDate}
         />
