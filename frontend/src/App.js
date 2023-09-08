@@ -10,9 +10,10 @@ import {
 } from "./components";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js/pure";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { STRIPE_KEY } from "./constants";
 import { useState } from "react";
+import EmptyHome from "./components/home/EmptyHome";
 
 const stripeKey = STRIPE_KEY;
 const stripePromise = loadStripe(stripeKey);
@@ -23,6 +24,7 @@ function App() {
       <Elements stripe={stripePromise}>
         <Router>
           <Routes>
+            <Route path="/" element={<Navigate replace to="/park/1" />} />
             <Route
               exact
               path="/park/:parkId/site/:siteId/:initialArrival/:initialDeparture/"
